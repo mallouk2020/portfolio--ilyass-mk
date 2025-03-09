@@ -4,7 +4,7 @@
 import React from "react";
 import { Card, CardContent } from "@/app/components/UI/card";
 import { Badge } from "@/app/components/UI/badge";
-import IconCloudDemo from "./ui/globe";
+// import IconCloudDemo from "./ui/globe";
 import { Code2, Paintbrush, Database, Layout, Cpu, Cloud , Monitor ,TabletSmartphone} from "lucide-react";
 import {
   FaReact,

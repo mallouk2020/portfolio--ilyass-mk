@@ -22,7 +22,7 @@ export const projectsData = [
         image: "/projects/e-commerce.png",
         role: 'Backend Developer',
         code: '',
-        demo: 'www.googlw.com',
+        demo: 'www.google.com',
         tools: [
             { name: "React", icon:<Ico/>},
             {

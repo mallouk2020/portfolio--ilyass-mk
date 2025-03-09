@@ -22,7 +22,7 @@ import Skills from "./components/homepage/skills/index";
 //   return filtered;
 // };
 
-export default async function Home() {
+export default  function Home() {
   // const blogs = await getData();/
 
   
@@ -34,7 +34,7 @@ export default async function Home() {
       <Skills />
       {/* <Projects /> */}
       <Education />
-      <Blog  />
+      <Blog />
       <ContactSection />
     </div>
   )
