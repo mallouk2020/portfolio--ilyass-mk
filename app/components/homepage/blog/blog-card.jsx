@@ -48,11 +48,11 @@ function BlogCard({ project }) {
           width={1920}
           alt=""
           className='h-full w-full group-hover:scale-110 transition-all duration-300'
-          unoptimized
         />
 
       </div>
-      <div className="p-2 sm:p-3 flex flex-col">
+      
+      {/* <div className="p-2 sm:p-3 flex flex-col">
         <div className="flex justify-between items-center text-[#16f2b3] text-sm">
           <div className="flex items-center gap-3">
             <p className="flex items-center gap-1">
@@ -72,7 +72,9 @@ function BlogCard({ project }) {
         </Link>
 
       
-      </div>
+      </div> */}
+
+
     </div>
   );
 };
