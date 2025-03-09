@@ -34,7 +34,7 @@ export default  function Home() {
       <Skills />
       {/* <Projects /> */}
       {/* <Education /> */}
-      {/* <Blog /> */}
+      <Blog />
       <ContactSection />
     </div>
   )
