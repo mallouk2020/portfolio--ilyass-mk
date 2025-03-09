@@ -59,12 +59,12 @@ function BlogCard({ project }) {
           </div>
         </div>
 
-        <Link target='_blank' href={project?.demo}>
+        <Link target='_blank' >
           <p className='my-2 lg:my-3 cursor-pointer text-lg text-white sm:text-xl font-medium hover:text-violet-500'>
             {project?.name}
           </p>
           <div className="flex flex-wrap gap-3">
-            {/* <Tools tools={project?.tools} /> */}
+            <Tools tools={project?.tools} />
           </div>
         </Link>
 
