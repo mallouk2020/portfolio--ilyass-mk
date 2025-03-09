@@ -24,7 +24,8 @@ export const projectsData = [
         code: '',
         demo: 'www.google.com',
         tools: [
-            { name: "React", icon:<Ico/>},
+            { name: "React", 
+             icon:<Ico/>},
             {
                 name: "Next.js",
                 icon: <SiNextdotjs className="w-4 h-4 text-white" />,

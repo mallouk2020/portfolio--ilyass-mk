@@ -21,6 +21,15 @@ module.exports = {
         hostname: 'media2.dev.to',
         pathname: '**',
       },
+       {
+        protocol: 'https',
+        hostname: 'portfolio-ilyass-mk.vercel.app', // Replace with your Vercel URL
+        port: '',
+        pathname: '/**', // Matches any path under the specified hostname
+      },
+      
     ],
   },
 }
+
+
