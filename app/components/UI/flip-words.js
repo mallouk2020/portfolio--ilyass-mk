@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export const FlipWords = ({ words, duration = 3000, className }) => {
@@ -8,12 +8,12 @@ export const FlipWords = ({ words, duration = 3000, className }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false); // حالة لتتبع التمرير
 
-  // دالة لتغيير الكلمة
-  const startAnimation = () => {
+  // دالة لتغيير الكلمة مع useCallback
+  const startAnimation = useCallback(() => {
     const word = words[words.indexOf(currentWord) + 1] || words[0];
     setCurrentWord(word);
     setIsAnimating(true);
-  };
+  }, [words, currentWord]); // تعتمد على words و currentWord
 
   // استخدام useEffect لتتبع التمرير
   useEffect(() => {
@@ -30,7 +30,7 @@ export const FlipWords = ({ words, duration = 3000, className }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, []); // لا يوجد اعتماديات هنا
 
   // تأثير الرسوم المتحركة فقط إذا كان التمرير أقل من 500px
   useEffect(() => {
@@ -41,7 +41,7 @@ export const FlipWords = ({ words, duration = 3000, className }) => {
         }, duration);
       }
     }
-  }, [isAnimating, duration, startAnimation, isScrolling]);
+  }, [isAnimating, duration, startAnimation, isScrolling]); // الآن startAnimation آمن كاعتمادية
 
   return (
     <AnimatePresence
