@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BsHeartFill } from 'react-icons/bs';
 import { Badge } from "@/app/components/UI/badge";
-import { projectsData } from '../../../../utils/data/projects-data';
+// import { projectsData } from '../../../../utils/data/projects-data';
 
 
 
@@ -11,7 +11,7 @@ import { projectsData } from '../../../../utils/data/projects-data';
 export function Tools({ tools }) {
   return (
     <>
-      {tools.map((tool, index) => (
+      {tools?.map((tool, index) => (
         <Badge
           key={index}  // إضافة key هنا
           id={`sticky-card-${index + 1}`}
@@ -19,9 +19,9 @@ export function Tools({ tools }) {
           className="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20"
         >
           <span className="transform group-hover/badge:scale-110 transition-transform duration-300">
-            {tool.icon}  {/* تغيير الاسم من tools إلى tool */}
+            {tool?.icon}  {/* تغيير الاسم من tools إلى tool */}
           </span>
-          <span className="font-medium">{tool.name}</span>  {/* تغيير الاسم من tools إلى tool */}
+          <span className="font-medium">{tool?.name}</span>  {/* تغيير الاسم من tools إلى tool */}
         </Badge>
       ))}
     </>
@@ -43,11 +43,12 @@ function BlogCard({ project }) {
       <div className="h-44 lg:h-52 w-auto cursor-pointer overflow-hidden rounded-t-lg">
 
         <Image
-          src={project.image}
+          src={project?.image}
           height={1080}
           width={1920}
           alt=""
           className='h-full w-full group-hover:scale-110 transition-all duration-300'
+          unoptimized
         />
 
       </div>
@@ -61,12 +62,12 @@ function BlogCard({ project }) {
            
           </div>
         </div>
-        <Link target='_blank' href={project.demo}>
+        <Link target='_blank' href={project?.demo}>
           <p className='my-2 lg:my-3 cursor-pointer text-lg text-white sm:text-xl font-medium hover:text-violet-500'>
-            {project.name}
+            {project?.name}
           </p>
           <div className="flex flex-wrap gap-3">
-            <Tools tools={project.tools} />
+            <Tools tools={project?.tools} />
           </div>
         </Link>
 
