@@ -59,7 +59,7 @@ function BlogCard({ project }) {
           </div>
         </div>
 
-        <Link target='_blank' >
+        <Link target='_blank' href={"#"}>
           <p className='my-2 lg:my-3 cursor-pointer text-lg text-white sm:text-xl font-medium hover:text-violet-500'>
             {project?.name}
           </p>
