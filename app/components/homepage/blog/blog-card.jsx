@@ -7,7 +7,7 @@ import { BsHeartFill } from 'react-icons/bs';
 // import { SiCss3, SiHtml5, SiNextdotjs, SiTailwindcss, SiTypescript } from 'react-icons/si';
 // import { FaReact } from 'react-icons/fa6';
 import { Badge } from "@/app/components/UI/badge";
-import { projectsData } from '@/utils/data/projects-data';
+import { projectsData } from '../../../../utils/data/projects-data';
 
 
 
@@ -39,42 +39,20 @@ export function Tools({ tools }) {
 
 function BlogCard({ project }) {
 
-  // const skills = [
-  //   { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
-  //   {
-  //     name: "Next.js",
-  //     icon: <SiNextdotjs className="w-4 h-4 text-white" />,
-  //   },
-  //   {
-  //     name: "TypeScript",
-  //     icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
-  //   },
-  //   {
-  //     name: "Tailwind CSS",
-  //     icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
-  //   },
-  //   {
-  //     name: "HTML5",
-  //     icon: <SiHtml5 className="w-4 h-4 text-[#E34F26]" />,
-  //   },
-  //   {
-  //     name: "CSS",
-  //     icon: <SiCss3 className="w-4 h-4 text-[#1572B6]" />,
-  //   },
-  // ]
+ 
 
   return (
     <div className="border border-[#1d293a] hover:border-[#464c6a] transition-all duration-500 bg-[#1b203e] rounded-lg relative group"
     >
       <div className="h-44 lg:h-52 w-auto cursor-pointer overflow-hidden rounded-t-lg">
-        
-        {/* <Image
+
+        <Image
           src={project.image}
           height={1080}
           width={1920}
           alt=""
           className='h-full w-full group-hover:scale-110 transition-all duration-300'
-        /> */}
+        />
 
       </div>
       <div className="p-2 sm:p-3 flex flex-col">
