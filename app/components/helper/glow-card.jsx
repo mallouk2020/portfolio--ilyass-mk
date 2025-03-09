@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-const GlowCard = ({ children , identifier}) => {
+const GlowCard = ({ children, identifier }) => {
   useEffect(() => {
     // التأكد من أن الكود يعمل في بيئة العميل فقط
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
