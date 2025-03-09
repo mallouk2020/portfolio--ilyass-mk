@@ -51,28 +51,25 @@ function BlogCard({ project }) {
         />
 
       </div>
-      
-      {/* <div className="p-2 sm:p-3 flex flex-col">
+
+      <div className="p-2 sm:p-3 flex flex-col">
         <div className="flex justify-between items-center text-[#16f2b3] text-sm">
           <div className="flex items-center gap-3">
-            <p className="flex items-center gap-1">
-
-              <BsHeartFill />
-            </p>
-           
+          
           </div>
         </div>
+
         <Link target='_blank' href={project?.demo}>
           <p className='my-2 lg:my-3 cursor-pointer text-lg text-white sm:text-xl font-medium hover:text-violet-500'>
             {project?.name}
           </p>
           <div className="flex flex-wrap gap-3">
-            <Tools tools={project?.tools} />
+            {/* <Tools tools={project?.tools} /> */}
           </div>
         </Link>
 
       
-      </div> */}
+      </div>
 
 
     </div>
