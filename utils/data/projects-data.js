@@ -1,17 +1,17 @@
 
 import { SiCss3, SiHtml5, SiNextdotjs, SiTailwindcss, SiTypescript } from 'react-icons/si';
 import { FaReact } from 'react-icons/fa6';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 
-export  function Ico (){
-   return( <Image
-    src={"/projects/sanity.ico"} 
-    alt={""} 
-    width={24}  // تحديد عرض الصورة
-    height={24}  // تحديد ارتفاع الصورة
-  />)
-}
+// export  function Ico (){
+//    return( <Image
+//     src={"/projects/sanity.ico"} 
+//     alt={""} 
+//     width={24}  // تحديد عرض الصورة
+//     height={24}  // تحديد ارتفاع الصورة
+//   />)
+// }
 
 export const projectsData = [
     {
@@ -24,7 +24,7 @@ export const projectsData = [
         code: '',
         demo: 'www.google.com',
         tools: [
-            { name: "React", icon:<Ico/>},
+            { name: "React", icon:<SiNextdotjs className="w-4 h-4 text-white" />},
             {
                 name: "Next.js",
                 icon: <SiNextdotjs className="w-4 h-4 text-white" />,
