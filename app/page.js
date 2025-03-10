@@ -30,10 +30,10 @@ export default  function Home() {
     <div suppressHydrationWarning >
       <HeroSection  />
       <AboutSection />
-      {/* <Experience /> */}
+      <Experience />
       <Skills />
       {/* <Projects /> */}
-      {/* <Education /> */}
+      <Education />
       <Blog />
       <ContactSection />
     </div>
