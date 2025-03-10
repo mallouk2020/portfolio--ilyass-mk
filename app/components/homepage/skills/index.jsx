@@ -35,9 +35,10 @@ import {
   SiCss3,
   SiMicrosoftazure,
   SiFlutter,
+  SiExpress,
 } from "react-icons/si";
 import { TbBrandVscode } from "react-icons/tb";
-import { BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
+import { BsEmojiExpressionless, BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
 import { MdAnimation, MdDesignServices, MdFileDownload, MdLaunch, MdWeb } from "react-icons/md";
 import { FcWorkflow } from "react-icons/fc";
 import { FaAndroid, FaApple, FaFire } from "react-icons/fa6";
@@ -159,10 +160,10 @@ const SkillsSection = () => {
           name: "MongoDB",
           icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
         },
-        // {
-        //   name: "REST APIs",
-        //   icon: <BsGrid1X2 className="w-4 h-4 text-[#FF6C37]" />,
-        // },
+        {
+          name: "Express",
+          icon: <SiExpress className="w-4 h-4 text-[#FF6C37]" />,
+        },
         // {
         //   name: "GraphQL",
         //   icon: <SiGraphql className="w-4 h-4 text-[#E10098]" />,

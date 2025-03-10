@@ -1,12 +1,12 @@
 // @flow strict
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
-import BlogCard from './blog-card';
-import Projects from '../projects';
+import ProjectCard from './project-card';
+// import Projects from '../projects';
 import { projectsData } from '@/utils/data/projects-data';
 
 
-function Blog( ) {
+function Projects( ) {
 
 
   return (
@@ -32,7 +32,7 @@ function Blog( ) {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 lg:gap-8 xl:gap-10">
         {
           projectsData?.slice(0, 6).map((project) => (
-            <BlogCard project={project} key={project.id} />
+            <ProjectCard project={project} key={project.id} />
           ))
         }
       </div>
@@ -53,4 +53,4 @@ function Blog( ) {
   );
 };
 
-export default Blog;
+export default Projects;

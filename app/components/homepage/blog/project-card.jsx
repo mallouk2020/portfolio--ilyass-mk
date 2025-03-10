@@ -33,7 +33,7 @@ export function Tools({ tools }) {
 
 
 
-function BlogCard({ project }) {
+function ProjectCard({ project }) {
 
  
 
@@ -78,4 +78,4 @@ function BlogCard({ project }) {
   );
 };
 
-export default BlogCard;
+export default ProjectCard;

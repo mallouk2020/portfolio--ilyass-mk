@@ -32,7 +32,7 @@ export const experiences = [
   {
     id: 2,
     title: "Full-Stack Developer",
-    company: "Fiverr (Freelance)",
+    company: " (Freelance)",
     duration: "(Jun 2023 - Jan 2024)"
   },
   {
