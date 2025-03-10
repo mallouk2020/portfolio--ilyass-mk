@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 
 // @flow strict
@@ -9,11 +9,6 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import experience from '../../../assets/lottie/code.json';
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
-
-// import dynamic from 'next/dynamic';
-
-// const GlowCard = dynamic(() => import('../../helper/glow-card'), { ssr: false });
-
 
 function Experience() {
   return (
@@ -50,7 +45,7 @@ function Experience() {
             <div className="flex flex-col gap-6">
               {
                 experiences.map(experience => (
-                  <div key={experience.id} identifier={`experience-${experience.id}`}>
+                  <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
 
                   
                     <div className="p-3 relative">
@@ -85,7 +80,7 @@ function Experience() {
                         </div>
                       </div>
                     </div>
-                    </div>
+                    </GlowCard>
                 ))
               }
             </div>
