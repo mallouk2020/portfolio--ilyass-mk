@@ -1,5 +1,5 @@
 
-import { SiCss3, SiHtml5, SiNextdotjs, SiTailwindcss, SiTypescript } from 'react-icons/si';
+import { SiCss3, SiHtml5, SiJavascript, SiNextdotjs, SiRedux, SiTailwindcss, SiTypescript } from 'react-icons/si';
 import { FaReact } from 'react-icons/fa6';
 import Image from 'next/image';
 
@@ -25,7 +25,7 @@ export const projectsData = [
         demo: 'www.google.com',
         tools: [
             { name: "React", 
-             icon:<Ico/>},
+             icon: <FaReact className="w-4 h-4 text-[#61DAFB]" />},
             {
                 name: "Next.js",
                 icon: <SiNextdotjs className="w-4 h-4 text-white" />,
@@ -46,11 +46,15 @@ export const projectsData = [
                 name: "CSS",
                 icon: <SiCss3 className="w-4 h-4 text-[#1572B6]" />,
             },
+            {
+                name: "sanity",
+                icon: <Ico/>,
+            },
         ],
     },
     {
         id: 2,
-        name: 'Travel Agency App',
+        name: 'Storage management system',
         description: 'I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick. The app supports multiple languages and currencies. I developed the API using NestJS, Typescript, MySQL, TypeORM, AWS, and Nodemailer. I deployed the front-end app to AWS Amplify and the back-end app to AWS EC2.',
         // tools: ['NextJS', 'Tailwind CSS', "Google Maps", "NestJS", "TypeScript", "MySQL", "AWS S3", "Sun-Editor", "Gmail Passkey"],
         image: "/projects/gestion-de-stock.png",
@@ -58,19 +62,19 @@ export const projectsData = [
         code: '',
         demo: '',
         tools: [
-            { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
+            // { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
+            // {
+            //     name: "Next.js",
+            //     icon: <SiNextdotjs className="w-4 h-4 text-white" />,
+            // },
             {
-                name: "Next.js",
-                icon: <SiNextdotjs className="w-4 h-4 text-white" />,
+                name: "javaScript",
+                icon: <SiJavascript className="w-4 h-4 text-[#3178C6]" />,
             },
-            {
-                name: "TypeScript",
-                icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
-            },
-            {
-                name: "Tailwind CSS",
-                icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
-            },
+            // {
+            //     name: "Tailwind CSS",
+            //     icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
+            // },
             {
                 name: "HTML5",
                 icon: <SiHtml5 className="w-4 h-4 text-[#E34F26]" />,
@@ -83,7 +87,7 @@ export const projectsData = [
     },
     {
         id: 3,
-        name: 'AI Powered Real Estate',
+        name: 'shopping cart',
         description: 'My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.',
         // tools: ['React', 'Bootstrap', 'SCSS', 'Stripe', 'Express', 'TypeScript', 'MongoDB', 'Azure Blob', 'OpenAI API', 'Replicate AI', 'Cronjob', 'JWT'],
         image: "/projects/shopping-cart.png",
@@ -108,27 +112,27 @@ export const projectsData = [
                 name: "HTML5",
                 icon: <SiHtml5 className="w-4 h-4 text-[#E34F26]" />,
             },
-            {
-                name: "CSS",
-                icon: <SiCss3 className="w-4 h-4 text-[#1572B6]" />,
-            },
+            // {
+            //     name: "CSS",
+            //     icon: <SiCss3 className="w-4 h-4 text-[#1572B6]" />,
+            // },
         ],
     },
     {
         id: 4,
-        name: 'Newsroom Management',
+        name: 'prayer timer',
         description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
         // tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
         image: "/projects/prayertimer.png",
         code: '',
         demo: '',
-        role: 'Full Stack Developer',
+        role: 'prayer timer',
         tools: [
             { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
-            {
-                name: "Next.js",
-                icon: <SiNextdotjs className="w-4 h-4 text-white" />,
-            },
+            // {
+            //     name: "Next.js",
+            //     icon: <SiNextdotjs className="w-4 h-4 text-white" />,
+            // },
             {
                 name: "TypeScript",
                 icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
@@ -157,11 +161,11 @@ export const projectsData = [
         demo: '',
         role: 'Full Stack Developer',
         tools: [
-            { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
-            {
-                name: "Next.js",
-                icon: <SiNextdotjs className="w-4 h-4 text-white" />,
-            },
+            { name: "React native", icon: <FaReact className="w-4 h-4 text-[#522cad]" /> },
+            // {
+            //     name: "Next.js",
+            //     icon: <SiNextdotjs className="w-4 h-4 text-white" />,
+            // },
             {
                 name: "TypeScript",
                 icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
@@ -182,13 +186,13 @@ export const projectsData = [
     },
     {
         id: 6,
-        name: 'Newsroom Management',
+        name: 'movie app',
         description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
         // tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
         image: "/projects/e-commerce.png",
         code: '',
         demo: '',
-        role: 'Full Stack Developer',
+        role: 'movie-app',
         tools: [
             { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
             {
@@ -200,8 +204,8 @@ export const projectsData = [
                 icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
             },
             {
-                name: "Tailwind CSS",
-                icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
+                name: "redux",
+                icon: <SiRedux className="w-4 h-4 text-[#38B2AC]" />,
             },
             {
                 name: "HTML5",
