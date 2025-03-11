@@ -7,6 +7,7 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import lottieFile from '../../../assets/lottie/study.json';
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
+import AnimatedSection from "../../helper/AnimatedSection";
 function Education() {
   return (
     <div id="education" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
@@ -44,8 +45,9 @@ function Education() {
           <div>
             <div className="flex flex-col gap-6">
               {
-                educations.map(education => (
-                  <GlowCard key={education.id} identifier={`education-${education.id}`}>
+                educations.map((education , index) => (
+                  <AnimatedSection key={education.id} index={index} >
+                  <GlowCard  identifier={`education-${education.id}`}>
                     <div className="p-3 relative text-white">
                       <Image
                         src="/blur-23.svg"
@@ -71,7 +73,7 @@ function Education() {
                         </div>
                       </div>
                     </div>
-                 </GlowCard>
+                 </GlowCard></AnimatedSection>
                 ))
               }
             </div>

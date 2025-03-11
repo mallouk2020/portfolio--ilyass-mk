@@ -9,6 +9,7 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import experience from '../../../assets/lottie/code.json';
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
+import AnimatedSection from "../../helper/AnimatedSection";
 
 function Experience() {
   return (
@@ -44,8 +45,9 @@ function Experience() {
           <div>
             <div className="flex flex-col gap-6">
               {
-                experiences.map(experience => (
-                  <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
+                experiences.map((experience ,index) => (
+                  <AnimatedSection key={experience.id} index={index}>
+                  <GlowCard identifier={`experience-${experience.id}`}>
 
                   
                     <div className="p-3 relative">
@@ -81,6 +83,7 @@ function Experience() {
                       </div>
                     </div>
                     </GlowCard>
+                    </AnimatedSection>
                 ))
               }
             </div>

@@ -5,7 +5,7 @@ import React from "react";
 import { Card, CardContent } from "@/app/components/UI/card";
 import { Badge } from "@/app/components/UI/badge";
 // import IconCloudDemo from "./ui/globe";
-import { Code2, Paintbrush, Database, Layout, Cpu, Cloud , Monitor ,TabletSmartphone} from "lucide-react";
+import { Code2, Paintbrush, Database, Layout, Cpu, Cloud, Monitor, TabletSmartphone } from "lucide-react";
 import {
   FaReact,
   FaNodeJs,
@@ -16,7 +16,7 @@ import {
   FaFigma,
   FaAws,
   FaMobileAlt,
-  
+
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -42,12 +42,14 @@ import { BsEmojiExpressionless, BsFileEarmarkCode, BsGrid1X2 } from "react-icons
 import { MdAnimation, MdDesignServices, MdFileDownload, MdLaunch, MdWeb } from "react-icons/md";
 import { FcWorkflow } from "react-icons/fc";
 import { FaAndroid, FaApple, FaFire } from "react-icons/fa6";
+import AnimatedSection from "../../helper/AnimatedSection";
+import AnimationLottie from "../../helper/animation-lottie";
 
 
 
 
 const SkillCard = ({ icon: Icon, title, skills, color }) => (
-  <Card className="group relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
+  <Card className="group relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 h-64">
     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
     <CardContent className="p-6 relative z-10">
       <div className="flex items-center gap-4 mb-6">
@@ -62,8 +64,8 @@ const SkillCard = ({ icon: Icon, title, skills, color }) => (
       </div>
       <div className="flex flex-wrap gap-2">
         {skills.map((skill, index) => (
+          <AnimatedSection key={index} index={index}>
           <Badge
-            key={index}
             variant="outline"
             className="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20"
           >
@@ -72,6 +74,7 @@ const SkillCard = ({ icon: Icon, title, skills, color }) => (
             </span>
             <span className="font-medium">{skill.name}</span>
           </Badge>
+          </AnimatedSection>
         ))}
       </div>
     </CardContent>
@@ -255,9 +258,9 @@ const SkillsSection = () => {
     //     },
     //   ],
     // },
-    
-    
-    
+
+
+
   ];
 
   return (
@@ -276,7 +279,7 @@ const SkillsSection = () => {
           <IconCloudDemo />
         </div> */}
 
-        
+
         <div className="flex justify-center my-5 lg:py-8">
           <div className="flex  items-center">
             <span className="w-24 h-[2px] bg-[#1a1443]"></span>
@@ -290,13 +293,16 @@ const SkillsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
-            <SkillCard
-              key={index}
-              icon={category.icon}
-              title={category.title}
-              skills={category.skills}
-              color={category.color}
-            />
+            <AnimatedSection key={index} index={index} >
+
+              <SkillCard
+                
+                icon={category.icon}
+                title={category.title}
+                skills={category.skills}
+                color={category.color}
+              />
+              </AnimatedSection>
           ))}
         </div>
       </section>
