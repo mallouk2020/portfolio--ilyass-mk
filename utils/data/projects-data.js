@@ -153,7 +153,7 @@ export const projectsData = [
     },
     {
         id: 5,
-        name: 'social media app',
+        name: 'social media application',
         description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
         // tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
         image: "/projects/whatssapp.png",
@@ -189,7 +189,7 @@ export const projectsData = [
         name: 'movie app',
         description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
         // tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
-        image: "/projects/e-commerce.png",
+        image: "/projects/movie.png",
         code: '',
         demo: '',
         role: 'movie-app',
