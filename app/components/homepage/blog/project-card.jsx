@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { BsHeartFill } from 'react-icons/bs';
 import { Badge } from "@/app/components/UI/badge";
 // import { projectsData } from '../../../../utils/data/projects-data';
+import AnimatedSection from '../../helper/AnimatedSection';
 
 
 
@@ -12,8 +13,9 @@ export function Tools({ tools }) {
   return (
     <>
       {tools?.map((tool, index) => (
+        <AnimatedSection key={index} index={index} >
         <Badge
-          key={index}  // إضافة key هنا
+          // إضافة key هنا
           id={`sticky-card-${index + 1}`}
           variant="outline"
           className="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20"
@@ -22,7 +24,7 @@ export function Tools({ tools }) {
             {tool?.icon}  {/* تغيير الاسم من tools إلى tool */}
           </span>
           <span className="font-medium">{tool?.name}</span>  {/* تغيير الاسم من tools إلى tool */}
-        </Badge>
+        </Badge></AnimatedSection>
       ))}
     </>
   );
@@ -38,7 +40,7 @@ function ProjectCard({ project }) {
  
 
   return (
-    <div className="border border-[#1d293a] hover:border-[#464c6a] transition-all duration-500 bg-[#1b203e] rounded-lg relative group"
+    <div className="border border-[#1d293a] hover:border-[#464c6a] transition-all duration-500 bg-[#1b203e] rounded-lg relative group "
     >
       <div className="h-44 lg:h-52 w-auto cursor-pointer overflow-hidden rounded-t-lg">
 
@@ -52,7 +54,7 @@ function ProjectCard({ project }) {
 
       </div>
 
-      <div className="p-2 sm:p-3 flex flex-col">
+      <div className="p-2 sm:p-3 flex flex-col  h-56">
         <div className="flex justify-between items-center text-[#16f2b3] text-sm">
           <div className="flex items-center gap-3">
           

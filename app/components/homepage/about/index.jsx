@@ -2,6 +2,7 @@
 
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
+import AnimatedSection from "../../helper/AnimatedSection";
 
 
 function AboutSection() {
@@ -22,6 +23,7 @@ function AboutSection() {
             {personalData.description}
           </p>
         </div>
+        <AnimatedSection>
         <div className="flex justify-center order-1 lg:order-2">
           <Image
             src={personalData.profile}
@@ -30,7 +32,7 @@ function AboutSection() {
             alt="ilyass mallouk"
             className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
           />
-        </div>
+        </div></AnimatedSection>
       </div>
     </div>
   );

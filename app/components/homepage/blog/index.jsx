@@ -4,7 +4,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import ProjectCard from './project-card';
 // import Projects from '../projects';
 import { projectsData } from '@/utils/data/projects-data';
-
+import AnimatedSection from '../../helper/AnimatedSection';
 
 function Projects( ) {
 
@@ -28,11 +28,13 @@ function Projects( ) {
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
         </div>
       </div>
-
+     
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 lg:gap-8 xl:gap-10">
         {
-          projectsData?.slice(0, 6).map((project) => (
-            <ProjectCard project={project} key={project.id} />
+          projectsData?.slice(0, 6).map((project , index) => ( 
+          <AnimatedSection  key={project.id} index={index} >
+            <ProjectCard project={project} />
+            </AnimatedSection>
           ))
         }
       </div>
