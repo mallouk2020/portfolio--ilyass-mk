@@ -1,75 +1,81 @@
 // @flow strict
-
 import Image from 'next/image';
-import * as React from 'react';
+import Link from 'next/link';
+import { BsHeartFill } from 'react-icons/bs';
+import { Badge } from "@/app/components/UI/badge";
+// import { projectsData } from '../../../../utils/data/projects-data';
+import AnimatedSection from '../../helper/AnimatedSection';
+
+
+
+
+export function Tools({ tools }) {
+  return (
+    <>
+      {tools?.map((tool, index) => (
+        <AnimatedSection key={index} index={index} >
+        <Badge
+          // إضافة key هنا
+          id={`sticky-card-${index + 1}`}
+          variant="outline"
+          className="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20"
+        >
+          <span className="transform group-hover/badge:scale-110 transition-transform duration-300">
+            {tool?.icon}  {/* تغيير الاسم من tools إلى tool */}
+          </span>
+          <span className="font-medium">{tool?.name}</span>  {/* تغيير الاسم من tools إلى tool */}
+        </Badge></AnimatedSection>
+      ))}
+    </>
+  );
+}
+
+
+
+
+
 
 function ProjectCard({ project }) {
 
-  return (
-    <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full">
-      <div className="flex flex-row">
-        <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
-        <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
-      </div>
-      <div className="px-4 lg:px-8 py-3 lg:py-5 relative">
-        <div className="flex flex-row space-x-1 lg:space-x-2 absolute top-1/2 -translate-y-1/2">
-          <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-red-400"></div>
-          <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-orange-400"></div>
-          <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-green-200"></div>
-        </div>
-        <p className="text-center ml-3 text-[#16f2b3] text-base lg:text-xl">
-          {project.name}
-        </p>
-      </div>
-      <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
-        <code className="font-mono text-xs md:text-sm lg:text-base">
-          <div className="blink">
-            <span className="mr-2 text-pink-500">const</span>
-            <span className="mr-2 text-white">project</span>
-            <span className="mr-2 text-pink-500">=</span>
-            <span className="text-gray-400">{'{'}</span>
-          </div>
-          <div>
-            <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
-            <span className="text-gray-400">{`'`}</span>
-            <span className="text-amber-300">{project.name}</span>
-            <span className="text-gray-400">{`',`}</span>
-          </div>
+ 
 
-          <div className="ml-4 lg:ml-8 mr-2">
-            <span className=" text-white">tools:</span>
-            <span className="text-gray-400">{` ['`}</span>
-            {
-              project.tools.map((tag, i) => (
-                <React.Fragment key={i}>
-                  <span className="text-amber-300">{tag}</span>
-                  {
-                    project.tools?.length - 1 !== i &&
-                    <span className="text-gray-400">{`', '`}</span>
-                  }
-                </React.Fragment>
-              ))
-            }
-            <span className="text-gray-400">{"],"}</span>
-          </div>
-          <div>
-            <span className="ml-4 lg:ml-8 mr-2 text-white">myRole:</span>
-            <span className="text-orange-400">{project.role}</span>
-            <span className="text-gray-400">,</span>
-          </div>
-          <div className="ml-4 lg:ml-8 mr-2">
-            <span className="text-white">Description:</span>
-            <span className="text-cyan-400">{' ' + project.description}</span>
-            <span className="text-gray-400">,</span>
-          </div>
-          <div><span className="text-gray-400">{`};`}</span></div>
-         
-        </code> 
-        {/* <Image 
-        width={300}
-        height={200}
-         src={project.image}/> */}
+  return (
+    <div className="border border-[#1d293a] hover:border-[#464c6a] transition-all duration-500 bg-[#1b203e] rounded-lg relative group "
+    >
+      <div className="h-44 lg:h-52 w-auto cursor-pointer overflow-hidden rounded-t-lg">
+
+        <Image
+          src={project?.image}
+          height={1080}
+          width={1920}
+          alt=""
+          className='h-full w-full group-hover:scale-110 transition-all duration-300'
+        />
+
       </div>
+
+      <div className="p-2 sm:p-3 flex flex-col  h-56">
+        <div className="flex justify-between items-center text-[#16f2b3] text-sm">
+          <div className="flex items-center gap-3">
+          
+          </div>
+        </div>
+
+        {/* <Link target='_blank' href={"#"}> */}
+
+          <p className='my-2 lg:my-3 cursor-pointer text-lg text-white sm:text-xl font-medium hover:text-violet-500'>
+            {project?.name}
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Tools tools={project?.tools} />
+          </div>
+          
+        {/* </Link> */}
+
+      
+      </div>
+
+
     </div>
   );
 };

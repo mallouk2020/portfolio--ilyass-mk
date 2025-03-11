@@ -73,7 +73,8 @@ function Education() {
                         </div>
                       </div>
                     </div>
-                 </GlowCard></AnimatedSection>
+                 </GlowCard>
+                 </AnimatedSection>
                 ))
               }
             </div>
