@@ -16,13 +16,12 @@ export  function Ico (){
 export const projectsData = [
     {
         id: 1,
-        name: 'full-stack e-commerce site',
-        description: "Me and my team built an AI-powered financial mobile application. I have developed API using Express, Typescript, OpenAI, AWS, and MongoDB. Used OTP via AWS SES, Google, and Facebook for the authentication system. Built AI assistants using OpenAI's latest model and trained using our dataset. Voice messages are converted to text using AWS Transcribe. The app fetches data from Google Sheets and generates a PDF term sheet, sent via AWS SES.",
-        // tools: ['Express', 'MongoDB', 'OpenAI API', 'AWS SES', 'AWS S3', 'Node Mailer', 'Joi', 'Puppeteer', 'EC2', 'PM2', 'Nginx'],
+        name: "full-stack e-commerce site",
+        description: "A complete e-commerce platform built with Next.js, TypeScript, and Sanity for CMS. Features include a responsive UI, dynamic product management, and seamless user authentication.",
         image: "/projects/e-commerce.png",
         role: 'Backend Developer',
         code: '',
-        demo: 'www.google.com',
+        link: 'https://github.com/mallouk2020/ecommerce',
         tools: [
             { name: "React", 
              icon: <FaReact className="w-4 h-4 text-[#61DAFB]" />},
@@ -52,15 +51,15 @@ export const projectsData = [
             },
         ],
     },
+
     {
         id: 2,
-        name: 'Storage management system',
-        description: 'I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick. The app supports multiple languages and currencies. I developed the API using NestJS, Typescript, MySQL, TypeORM, AWS, and Nodemailer. I deployed the front-end app to AWS Amplify and the back-end app to AWS EC2.',
-        // tools: ['NextJS', 'Tailwind CSS', "Google Maps", "NestJS", "TypeScript", "MySQL", "AWS S3", "Sun-Editor", "Gmail Passkey"],
+        name: "Storage management system",
+        description: "A web-based inventory management system designed for efficient stock tracking and control, utilizing JavaScript, HTML5, and CSS.",
         image: "/projects/gestion-de-stock.png",
         role: 'Full Stack Developer',
         code: '',
-        demo: '',
+        link: 'https://github.com/mallouk2020/cruds',
         tools: [
             // { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
             // {
@@ -87,13 +86,12 @@ export const projectsData = [
     },
     {
         id: 3,
-        name: 'shopping cart',
-        description: 'My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.',
-        // tools: ['React', 'Bootstrap', 'SCSS', 'Stripe', 'Express', 'TypeScript', 'MongoDB', 'Azure Blob', 'OpenAI API', 'Replicate AI', 'Cronjob', 'JWT'],
+        name: "shopping cart",
+        description: "A modern shopping cart application leveraging React, Next.js, and TypeScript, featuring a seamless UI and dynamic cart management.",
         image: "/projects/shopping-cart.png",
         code: '',
         role: 'Full Stack Developer',
-        demo: '',
+        link: 'https://github.com/mallouk2020/shopping-cart',
         tools: [
             { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
             {
@@ -120,12 +118,11 @@ export const projectsData = [
     },
     {
         id: 4,
-        name: 'prayer timer',
-        description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
-        // tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        name: "prayer timer",
+        description: "A web app that provides accurate prayer times and notifications, built with React, TypeScript, and Tailwind CSS for a clean and responsive UI.",
         image: "/projects/prayertimer.png",
         code: '',
-        demo: '',
+        link: 'https://github.com/mallouk2020/prayertime',
         role: 'prayer timer',
         tools: [
             { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
@@ -153,12 +150,11 @@ export const projectsData = [
     },
     {
         id: 5,
-        name: 'social media application',
-        description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
-        // tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        name: "social media application",
+        description: "A WhatsApp clone developed using React Native and TypeScript, featuring real-time messaging and a smooth user experience.",
         image: "/projects/whatssapp.png",
         code: '',
-        demo: '',
+        link: 'https://github.com/mallouk2020/whatsappclone',
         role: 'Full Stack Developer',
         tools: [
             { name: "React native", icon: <FaReact className="w-4 h-4 text-[#522cad]" /> },
@@ -186,12 +182,11 @@ export const projectsData = [
     },
     {
         id: 6,
-        name: 'movie app',
-        description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
-        // tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        name: "movie app",
+        description: "A movie streaming application built with React, offering a modern UI, movie search functionality, and smooth navigation.",
         image: "/projects/movie.png",
         code: '',
-        demo: '',
+        link: 'https://github.com/mallouk2020/movie-app',
         role: 'movie-app',
         tools: [
             { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
@@ -232,5 +227,5 @@ export const projectsData = [
 //     tools: [],
 //     role: '',
 //     code: '',
-//     demo: '',
+//     link: '',
 // },
